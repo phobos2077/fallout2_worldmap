@@ -103,7 +103,7 @@ def parse_enc(item):
         #print(kv)
         if (len(kv) == 1 and re.match('\s*If', kv[0])): enc['cond'] = kv[0].strip()
         elif (len(kv) == 2): 
-            k = kv[0].lower()
+            k = kv[0].lower().strip()
             if k == 'enc':
                 enc['types'] = parse_enc_desc(kv[1])
             if k == 'chance':
